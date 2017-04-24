@@ -51,18 +51,14 @@ class Aluno extends Pessoa{
         $this->ano = $ano;
     }
     
-    public function getMensalidade()
+    public function getMensalidade($mensalidade)
     {
-        return $this->mensalidade;
+        return $mensalidade;
     }
     
     public function setMensalidade($mensalidade)
     {
         $this->mensalidade = $mensalidade;
-    }
-    
-    public function __construct() {
-        $this->mensalidade = 500;
     }
     
     public function getNome() {

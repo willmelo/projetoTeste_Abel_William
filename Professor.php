@@ -15,10 +15,7 @@
 require_once 'Pessoa.php';
 
 class Professor extends Pessoa{
-    private $materia;//Um professor ensina uma matéria
-    /*
-     * Um professor é uma especialização de pessoa, um tipo especifico de pessoa.
-     */
+    private $materia;
     
     public function getMateria()
     {
@@ -49,4 +46,9 @@ class Professor extends Pessoa{
         parent::setCpf($cpf);
         $this->cpf = $cpf;
     }
+    
+    /*
+     * Um professor é uma pessoa, isso significa que ele tem os mesmos métodos e atributos 
+     * da classe pessoa, mas tem uma especialização, pois um professor ensina uma matéria
+     */
 }

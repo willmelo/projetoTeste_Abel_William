@@ -91,4 +91,16 @@ class Aluno extends Pessoa{
         $this->cpf = $cpf;
     }
     
+    public function pagarMensalidade(){
+        echo "<script type='text/javscript'>"
+        . "alert('O aluno pagou a mensalidade')"
+                . "</script>";
+    }
+
+
+    /*
+     * Um aluno também é uma pessoa, mas sua especialização está definida pelo
+     * fato dele pagar uma mensalidade
+     */
+    
 }

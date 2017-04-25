@@ -38,4 +38,17 @@ class Bolsista extends Aluno{
         $this->mensalidade = 0;
     }
     
+    public function pagarMensalidade() {
+        parent::pagarMensalidade();
+        echo "<script type='text/javascript'>"
+        . "alert('Este aluno não paga mensalidade)"
+                . "</script>";
+    }
+
+
+    /*
+     * O bolsista também é um aluno, logo também é uma pessoa, dessa forma ele faz
+     * as mesmas coisas que um aluno e uma pesoa faz com a diferença que ele não 
+     * faz o pagamento de mensalidade.
+     */
 }

@@ -17,7 +17,10 @@ and open the template in the editor.
             $b->setNome("Abel");
             $b->setSobrenome("Souza Costa Junior");
             $b->setIdade(20);
-            $b->setTipo(100);
+            $b->setCpf(072289116365);
+            $b->setAno(2);
+            $b->setTurma("CHP51175");
+            
             
             var_dump($b);
         ?>

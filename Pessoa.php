@@ -13,7 +13,6 @@
  */
 class Pessoa {
     private $nome, $sobrenome, $cpf;
-    protected $cargo;
             
    protected function getCpf()
    {
@@ -23,16 +22,6 @@ class Pessoa {
    protected function setCpf($cpf)
    {
        $this->cpf = $cpf;
-   }
-   
-   protected function getCargo()
-   {
-       return $this->cargo;
-   }
-   
-   protected function setCargo($cargo)
-   {
-       $this->cargo = $cargo;
    }
    
    protected function getNome()
@@ -56,10 +45,7 @@ class Pessoa {
    }
 
 
-   /*
-    * Toda pessoa possui um nome um sobrenome e um cargo dentro de um colégio, como 
-    * a mesma é uma classe generelista(das quais serão herdadas atributos e métodos)
-    * seus atributos são todos protegidos,para que as classes filhas também tenham acesso
-    * aos mesmos.
-    */
+  /*
+   * Toda pessoa possui um nome, sobrenome e CPF dentro de uma instituição de ensino
+   */
 }

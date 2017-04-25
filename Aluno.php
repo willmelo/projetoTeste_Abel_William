@@ -51,18 +51,14 @@ class Aluno extends Pessoa{
         $this->ano = $ano;
     }
     
-    public function getMensalidade()
+    public function getMensalidade($mensalidade)
     {
-        return $this->mensalidade;
+        return $mensalidade;
     }
     
     public function setMensalidade($mensalidade)
     {
         $this->mensalidade = $mensalidade;
-    }
-    
-    public function __construct() {
-        $this->mensalidade = 500;
     }
     
     public function getNome() {
@@ -94,5 +90,17 @@ class Aluno extends Pessoa{
         parent::setCpf($cpf);
         $this->cpf = $cpf;
     }
+    
+    public function pagarMensalidade(){
+        echo "<script type='text/javscript'>"
+        . "alert('O aluno pagou a mensalidade')"
+                . "</script>";
+    }
+
+
+    /*
+     * Um aluno também é uma pessoa, mas sua especialização está definida pelo
+     * fato dele pagar uma mensalidade
+     */
     
 }

@@ -14,14 +14,14 @@
 
 
 /*
- * Um bolsista é um tipo de aluno que pode não pagar mensalidade, 
- * ou pode pagar somente uma parte dela
+ * Um bolsista é um tipo de aluno que não paga mensalidade
+ * 
  */
 
 require_once 'Aluno.php';
 
 class Bolsista extends Aluno{
-    private $nbolsa, $tipo;//Número da bolsa
+    private $nbolsa;//Número da bolsa
     
     
     public function getNbolsa()
@@ -34,27 +34,21 @@ class Bolsista extends Aluno{
         $this->nbolsa = $n;
     }
     
-    public function getTipo()
-    {
-        return $this->tipo;
-    }
-    
-    public function setTipo($tipo)
-    {
-        $this->tipo = $tipo;
-    }
-    
     public function __construct() {
-        if ($this->getTipo() == 100)
-        {
-            $this->mensalidade = 0;
-        } else{
-            if ($this->getTipo() == 50)
-            {
-                $this->mensalidade = 250;
-            } else{
-                $this->mensalidade = 125;
-            }
-        }
+        $this->mensalidade = 0;
     }
+    
+    public function pagarMensalidade() {
+        parent::pagarMensalidade();
+        echo "<script type='text/javascript'>"
+        . "alert('Este aluno não paga mensalidade)"
+                . "</script>";
+    }
+
+
+    /*
+     * O bolsista também é um aluno, logo também é uma pessoa, dessa forma ele faz
+     * as mesmas coisas que um aluno e uma pesoa faz com a diferença que ele não 
+     * faz o pagamento de mensalidade.
+     */
 }
